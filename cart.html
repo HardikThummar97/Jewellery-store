@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <style>
+      #section {
+        margin-right: auto;
+        width: 80%;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      #section img {
+        width: 80%;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cart</h1>
+    <div id="promoDiv">
+      <input id="promo" type="text" placeholder="Add PromoCode" />
+      <button onclick="promo()">Add Promo</button>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+    <div id="section"></div>
+  </body>
+</html>
+
+<script src="cart.js"></script>

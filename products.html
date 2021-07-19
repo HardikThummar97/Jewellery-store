@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <style>
+      .sidebar {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+      }
+      .sidebar form {
+        width: 90%;
+        padding: 5%;
+      }
+      .sidebar,
+      #section {
+        float: left;
+      }
+      #section {
+        margin: auto;
+        width: 80%;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      #section img {
+        width: 80%;
+        margin: auto;
+      }
+      #cart > img {
+        width: 50px;
+        float: right;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cart">
+      <img
+        src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png"
+      />
+    </div>
+    <h1>Products</h1>
+    <div class="sidebar">
+      <form id="priceSort" onsubmit="priceSort(event)">
+        <h3>Price Range</h3>
+        <input type="text" id="from" placeholder="from" />
+        <input type="text" id="to" placeholder="to" />
+        <input type="submit" />
+      </form>
+      <form id="brandSort" onsubmit="brandSort(event)">
+        <h3>Brand</h3>
+        <input type="checkbox" value="Tanishq" id="j1" />
+        <label for="j1">Tanishq</label>
+        <input type="checkbox" value="Voylla" id="j2" />
+        <label for="j2">Voylla</label>
+        <input type="submit" />
+      </form>
+    </div>
+    <div id="section"></div>
+  </body>
+</html>
+
+<script src="products.js"></script>

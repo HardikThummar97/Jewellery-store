@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <style>
+      form {
+        width: 20%;
+        height: 200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Payment</h1>
+    <div class="form">
+      <form id="checkout">
+        <input type="text" id="cardNo" placeholder="card Number" />
+        <input type="text" id="exp" placeholder="exp. date (mm/yy)" />
+        <input type="text" id="name" placeholder="Card holder's name" />
+        <input type="text" id="cvv" placeholder="CVV" />
+        <button onclick="place(event)">Place order</button>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  function place(e) {
+    e.preventDefault();
+    setTimeout(function () {
+      alert("Your order is successfully placed");
+    }, 3000);
+  }
+</script>
