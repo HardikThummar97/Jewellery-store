@@ -6,12 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
     <style>
+      * {
+        text-align: center;
+      }
+      button {
+        width: max-content;
+        padding: 2px 15px;
+        color: white;
+        background-color: rgb(226, 193, 131);
+        border: 1px solid grey;
+        border-radius: 10%;
+        cursor: pointer;
+      }
       #section {
-        margin-right: auto;
-        width: 80%;
-        border: 1px solid black;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+      }
+      #section > div {
+        width: 25%;
+        min-width: 190px;
+        margin: 10px auto;
+        height: 300px;
+        height: max-content;
+        box-shadow: 0 0 5px 5px rgba(1, 1, 1, 0.05);
       }
       #section img {
         width: 80%;

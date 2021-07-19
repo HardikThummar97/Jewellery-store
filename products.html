@@ -6,59 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
     <style>
+      * {
+        text-align: center;
+      }
       .sidebar {
-        width: 15%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        border: 1px solid black;
+        justify-content: space-around;
+        background-color: #4b52584d;
       }
-      .sidebar form {
-        width: 90%;
-        padding: 5%;
+      input {
+        max-width: 15%;
       }
-      .sidebar,
+      button {
+        width: max-content;
+        padding: 2px 15px;
+        color: white;
+        background-color: rgb(226, 193, 131);
+        border: 1px solid grey;
+        border-radius: 10%;
+        cursor: pointer;
+      }
       #section {
-        float: left;
-      }
-      #section {
+        width: 100%;
         margin: auto;
-        width: 80%;
-        border: 1px solid black;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+      }
+      #section > div {
+        width: 25%;
+        min-width: 190px;
+        margin: 10px auto;
+        height: 300px;
+        height: max-content;
+        box-shadow: 0 0 5px 5px rgba(1, 1, 1, 0.05);
       }
       #section img {
         width: 80%;
         margin: auto;
       }
       #cart > img {
+        margin-right: 20px;
         width: 50px;
         float: right;
         cursor: pointer;
       }
+      #cart {
+        width: 100%;
+        background-color: antiquewhite;
+        padding: 5px;
+      }
+      span {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        padding: 5px;
+        background-color: red;
+        color: white;
+        float: right;
+      }
+      h2 {
+        color: rebeccapurple;
+        align-self: center;
+        font-size: 30px;
+      }
     </style>
   </head>
   <body>
-    <div id="cart">
+    <header id="cart">
       <img
         src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png"
       />
-    </div>
-    <h1>Products</h1>
+      <span></span>
+      <h1>Products</h1>
+    </header>
     <div class="sidebar">
+      <h2>Sort by</h2>
       <form id="priceSort" onsubmit="priceSort(event)">
         <h3>Price Range</h3>
         <input type="text" id="from" placeholder="from" />
-        <input type="text" id="to" placeholder="to" />
-        <input type="submit" />
+        <input type="text" id="to" placeholder="to" /><br />
+        <button type="submit">Sort</button>
       </form>
       <form id="brandSort" onsubmit="brandSort(event)">
         <h3>Brand</h3>
         <input type="checkbox" value="Tanishq" id="j1" />
         <label for="j1">Tanishq</label>
         <input type="checkbox" value="Voylla" id="j2" />
-        <label for="j2">Voylla</label>
-        <input type="submit" />
+        <label for="j2">Voylla</label><br />
+        <button type="submit">Sort</button>
       </form>
     </div>
     <div id="section"></div>

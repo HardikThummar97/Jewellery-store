@@ -65,6 +65,8 @@ if (localStorage.getItem("products") == null) {
   localStorage.setItem("products", JSON.stringify(products));
 }
 
+let counter = document.querySelector("span");
+console.log("counter:", counter);
 var section = document.getElementById("section");
 
 function showProducts(p) {
@@ -95,7 +97,7 @@ function showProducts(p) {
     name.innerHTML = el.item;
 
     let price = document.createElement("p");
-    price.innerHTML = el.price;
+    price.innerHTML = `Rs. ${el.price}`;
 
     let btn = document.createElement("button");
     btn.innerText = "Add To Cart";
@@ -109,6 +111,8 @@ function showProducts(p) {
         cart = JSON.parse(localStorage.getItem("cart"));
       }
       cart.push(el);
+
+      counter.innerText = cart.length;
 
       localStorage.setItem("cart", JSON.stringify(cart));
     });

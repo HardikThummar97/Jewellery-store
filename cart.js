@@ -31,7 +31,7 @@ function showProducts(p) {
     name.innerHTML = el.item;
 
     let price = document.createElement("p");
-    price.innerHTML = el.price;
+    price.innerHTML = `Rs. ${el.price}`;
 
     let btn = document.createElement("button");
     btn.innerText = "Remove";
@@ -53,7 +53,7 @@ function promo() {
       count++;
       alert("Success");
       for (var i = 0; i < cart.length; i++) {
-        cart[i].price *= 0.7;
+        cart[i].price = Math.ceil(cart[i].price * 0.7);
       }
     } else {
       alert("invalid PromoCode!");
